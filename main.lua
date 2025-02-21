@@ -14,11 +14,13 @@ local v127 = v126:CreateWindow({
 local v128 = {
     ["Home"] = v127:AddTab({["Title"] = "Home", ["Icon"] = "rbxassetid://7733960981"}),
     ["Main"] = v127:AddTab({["Title"] = "Main", ["Icon"] = "rbxassetid://7733749837"}),
+    ["AutoFarm"] = v127:AddTab({["Title"] = "Auto Farm", ["Icon"] = "rbxassetid://94890807905992"}),
     ["Eggs"] = v127:AddTab({["Title"] = "Eggs", ["Icon"] = "rbxassetid://111252145412943"}), 
     ["Race"] = v127:AddTab({["Title"] = "Race", ["Icon"] = "rbxassetid://112318332168449"}), 
     ["Sell"] = v127:AddTab({["Title"] = "Sell", ["Icon"] = "rbxassetid://117261545997503"}),
     ["Teleport"] = v127:AddTab({["Title"] = "Teleport", ["Icon"] = "rbxassetid://101935059230281"}),
     ["Misc"] = v127:AddTab({["Title"] = "Misc", ["Icon"] = "rbxassetid://7733789088"}),
+    ["LP"] = v127:AddTab({["Title"] = "LocalPlayer", ["Icon"] = "rbxassetid://130807059017012"}),
     ["Settings"] = v127:AddTab({["Title"] = "Settings", ["Icon"] = "settings"})
 }
 
@@ -50,7 +52,7 @@ v128.Main:AddToggle("AutoBlowToggle", {
     end
 })
 
-v128.Main:AddToggle("AutoPickupToggle", {
+v128.Main:AutoFarm("AutoPickupToggle", {
     ["Title"] = "Auto Pickup",
     ["Description"] = "Automatically picks up Coins, Gems, etc.",
     ["Default"] = false,
@@ -59,7 +61,7 @@ v128.Main:AddToggle("AutoPickupToggle", {
     end
 })
 
-v128.Main:AddToggle("AutoLevels", {
+v128.Main:AutoFarm("AutoLevels", {
     ["Title"] = "Auto Levels",
     ["Description"] = "Automatically levels up for you.",
     ["Default"] = false,
@@ -178,5 +180,17 @@ v128.Race:AddToggle("RaceToggle", {
     ["Default"] = false,
     ["Callback"] = function(state)
         -- Insert auto hatch functionality here
+    end
+})
+
+v128.LP:AddSlider("SpeedSlider", {
+    ["Title"] = "Walk Speed",
+    ["Description"] = "Increase Walk Speed",
+    ["Default"] = 38 - 22,
+    ["Min"] = 6 + 10,
+    ["Max"] = 500,
+    ["Rounding"] = 1 + 0,
+    ["Callback"] = function(v184)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v184
     end
 })

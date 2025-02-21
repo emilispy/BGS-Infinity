@@ -41,8 +41,7 @@ v128.Home:AddParagraph({
     ["Content"] = "v0.0a"
 })
 
-
-v128.Main:AutoFarm("AutoBlowToggle", {
+v128.AutoFarm:AddToggle("AutoBlowToggle", {
     ["Title"] = "Auto Blow",
     ["Description"] = "Automatically blows bubbles for you.",
     ["Default"] = false,

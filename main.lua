@@ -62,11 +62,11 @@ v128.AutoFarm:AddToggle("AutoPickupToggle", {
 })
 
 v128.AutoFarm:AddToggle("AutoLevels", {
-    ["Title"] = "Auto Levels",
-    ["Description"] = "Automatically levels up for you.",
-    ["Default"] = false,
-    ["Callback"] = function(state)
-        -- Insert auto upgrade functionality here
+    Title = "Auto Levels",
+    Description = "Automatically levels up for you.",
+    Default = false,
+    Callback = function(state)
+        -- Insert auto level upgrade functionality here
     end
 })
 
@@ -158,39 +158,39 @@ v128.Misc:AddToggle("AntiAFK", {
 })
 
 v128.Misc:AddButton({
-    ["Title"] = "GFX Mode",
-    ["Description"] = "Removes lag after time.",
-    ["Callback"] = function()
-        -- Insert code to unlock all islands here
+    Title = "GFX Mode",
+    Description = "Removes lag after time.",
+    Callback = function()
+        -- Insert GFX mode functionality here
     end
 })
 
 v128.Misc:AddButton({
-    ["Title"] = "Hide Events",
-    ["Description"] = "Hides event labels.",
-    ["Callback"] = function()
-        -- Insert code to unlock all islands here
+    Title = "Hide Events",
+    Description = "Hides event labels.",
+    Callback = function()
+        -- Insert code to hide events here
     end
 })
 
-
 v128.Race:AddToggle("RaceToggle", {
-    ["Title"] = "Auto Race",
-    ["Description"] = "Automatically wins the races.",
-    ["Default"] = false,
-    ["Callback"] = function(state)
-        -- Insert auto hatch functionality here
+    Title = "Auto Race",
+    Description = "Automatically wins the races.",
+    Default = false,
+    Callback = function(state)
+        -- Insert auto race functionality here
     end
 })
 
 v128.LP:AddSlider("SpeedSlider", {
-    ["Title"] = "Walk Speed",
-    ["Description"] = "Increase Walk Speed",
-    ["Default"] = 38 - 22,
-    ["Min"] = 6 + 10,
-    ["Max"] = 500,
-    ["Rounding"] = 1 + 0,
-    ["Callback"] = function(v184)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v184
+    Title = "Walk Speed",
+    Description = "Increase Walk Speed",
+    Default = 16,
+    Min = 16,
+    Max = 500,
+    Rounding = 1,
+    Callback = function(newSpeed)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = newSpeed
     end
 })
+

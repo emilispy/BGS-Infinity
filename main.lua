@@ -2,8 +2,8 @@ game:GetService("StarterGui"):SetCore("SendNotification", {Title = "BGS Infinity
 
 local v126 = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local v127 = v126:CreateWindow({
-    ["Title"] = "BGS Infinity | Release",
-    ["SubTitle"] = "By @emilispy on discord",
+    ["Title"] = "BGS Infinity",
+    ["SubTitle"] = "1.0.0",
     ["TabWidth"] = 588 - 428,
     ["Size"] = UDim2.fromOffset(580, 280 + 180),
     ["Acrylic"] = true,
@@ -31,13 +31,9 @@ v129:BuildConfigSection(v128.Settings)
 v127:SelectTab(1)
 
 v128.Home:AddButton({
-    ["Title"] = "Join our discord",
-    ["Description"] = "Click on this button to copy the invite link!",
+    ["Title"] = "Bugs or questions?",
+    ["Description"] = "Dm @emilispy for help or information.",
     ["Callback"] = function() end
-})
-v128.Home:AddParagraph({
-    ["Title"] = "Script Version",
-    ["Content"] = "1.0.0"
 })
 v128.Home:AddParagraph({
     ["Title"] = "Supported Game Version",

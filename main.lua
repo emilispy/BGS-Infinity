@@ -52,7 +52,7 @@ v128.Main:AddToggle("AutoBlowToggle", {
     end
 })
 
-v128.Main:AutoFarm("AutoPickupToggle", {
+v128.AutoFarm:AddToggle("AutoPickupToggle", {
     ["Title"] = "Auto Pickup",
     ["Description"] = "Automatically picks up Coins, Gems, etc.",
     ["Default"] = false,
@@ -61,7 +61,7 @@ v128.Main:AutoFarm("AutoPickupToggle", {
     end
 })
 
-v128.Main:AutoFarm("AutoLevels", {
+v128.Autofarm:AddToggle("AutoLevels", {
     ["Title"] = "Auto Levels",
     ["Description"] = "Automatically levels up for you.",
     ["Default"] = false,

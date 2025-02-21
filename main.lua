@@ -15,10 +15,10 @@ local v128 = {
     ["Home"] = v127:AddTab({["Title"] = "Home", ["Icon"] = "rbxassetid://7733960981"}),
     ["Main"] = v127:AddTab({["Title"] = "Main", ["Icon"] = "rbxassetid://7733749837"}),
     ["Eggs"] = v127:AddTab({["Title"] = "Eggs", ["Icon"] = "rbxassetid://111252145412943"}), 
-    ["Sell"] = v127:AddTab({["Title"] = "Sell", ["Icon"] = "rbxassetid://124695759365831"}),
-    ["Teleport"] = v127:AddTab({["Title"] = "Teleport", ["Icon"] = "rbxassetid://92463114770964"}),
+    ["Race"] = v127:AddTab({["Title"] = "Race", ["Icon"] = "rbxassetid://112318332168449"}), 
+    ["Sell"] = v127:AddTab({["Title"] = "Sell", ["Icon"] = "rbxassetid://117261545997503"}),
+    ["Teleport"] = v127:AddTab({["Title"] = "Teleport", ["Icon"] = "rbxassetid://101935059230281"}),
     ["Misc"] = v127:AddTab({["Title"] = "Misc", ["Icon"] = "rbxassetid://7733789088"}),
-    ["Performance"] = v127:AddTab({["Title"] = "Performance", ["Icon"] = "rbxassetid://7733955511"}),
     ["Settings"] = v127:AddTab({["Title"] = "Settings", ["Icon"] = "settings"})
 }
 
@@ -87,9 +87,7 @@ v128.Main:AddButton({
         -- Insert code to unlock all islands here
     end
 })
---------------------------------------------------
--- Eggs Tab: Egg Hatching Features
---------------------------------------------------
+
 v128.Eggs:AddToggle("AutoHatchToggle", {
     ["Title"] = "Auto Hatch",
     ["Description"] = "Automatically hatches eggs for you.",
@@ -128,9 +126,6 @@ v128.Eggs:AddDropdown("HatchTypeDropdown", {
     end
 })
 
---------------------------------------------------
--- Sell Tab: Auto Sell Features
---------------------------------------------------
 v128.Sell:AddToggle("AutoSellToggle", {
     ["Title"] = "Auto Sell",
     ["Description"] = "Automatically sells your bubbles.",
@@ -150,6 +145,13 @@ v128.Sell:AddDropdown("SellTypeDropdown", {
     end
 })
 
+v128.Misc:AddToggle("AntiAFK", {
+    ["Title"] = "Anti AFK",
+    ["Description"] = "Prevents you from disconnecting every 20 minutes.",
+    ["Default"] = false,
+    ["Callback"] = function(state) end
+})
+
 v128.Misc:AddButton({
     ["Title"] = "GFX Mode",
     ["Description"] = "Removes lag after time.",
@@ -166,15 +168,12 @@ v128.Misc:AddButton({
     end
 })
 
-v128.Misc:AddToggle("FreezeToggle", {
-    ["Title"] = "Freeze",
-    ["Description"] = "Freeze your player in place.",
-    ["Default"] = false,
-    ["Callback"] = function(state) end
-})
 
-v128.Misc:AddButton({
-    ["Title"] = "Anti AFK", 
-    ["Description"] = "Prevents AFK kick for uninterrupted farming.", 
-    ["Callback"] = function() end
+v128.Race:AddToggle("RaceToggle", {
+    ["Title"] = "Auto Race",
+    ["Description"] = "Automatically wins the races.",
+    ["Default"] = false,
+    ["Callback"] = function(state)
+        -- Insert auto hatch functionality here
+    end
 })

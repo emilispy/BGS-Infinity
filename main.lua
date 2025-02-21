@@ -15,7 +15,6 @@ local v128 = {
     ["Home"] = v127:AddTab({["Title"] = "Home", ["Icon"] = "rbxassetid://7733960981"}),
     ["AutoFarm"] = v127:AddTab({["Title"] = "Auto Farm", ["Icon"] = "rbxassetid://94890807905992"}),
     ["Eggs"] = v127:AddTab({["Title"] = "Eggs", ["Icon"] = "rbxassetid://111252145412943"}), 
-    ["Race"] = v127:AddTab({["Title"] = "Race", ["Icon"] = "rbxassetid://112318332168449"}), 
     ["Sell"] = v127:AddTab({["Title"] = "Sell", ["Icon"] = "rbxassetid://117261545997503"}),
     ["Teleport"] = v127:AddTab({["Title"] = "Teleport", ["Icon"] = "rbxassetid://101935059230281"}),
     ["Misc"] = v127:AddTab({["Title"] = "Misc", ["Icon"] = "rbxassetid://7733789088"}),
@@ -155,7 +154,7 @@ v128.Misc:AddButton({
     end
 })
 
-v128.Race:AddToggle("RaceToggle", {
+v128.AutoFarm:AddToggle("RaceToggle", {
     Title = "Auto Race",
     Description = "Automatically wins the races.",
     Default = false,

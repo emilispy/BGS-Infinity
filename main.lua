@@ -68,15 +68,6 @@ v128.AutoFarm:AddToggle("AutoLevels", {
     end
 })
 
-
-v128.Main:AddButton({
-    ["Title"] = "Unlock All",
-    ["Description"] = "Unlocks all islands for you.",
-    ["Callback"] = function()
-        -- Insert code to unlock all islands here
-    end
-})
-
 v128.Eggs:AddToggle("AutoHatchToggle", {
     ["Title"] = "Auto Hatch",
     ["Description"] = "Automatically hatches eggs for you.",

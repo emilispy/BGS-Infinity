@@ -1,4 +1,4 @@
-game:GetService("StarterGui"):SetCore("SendNotification", {Title = "BGS Infinity", Text = "Loading script, please wait..", Icon = "rbxassetid://5107182114", Duration = 5})
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "BGS Infinity", Text = "Loading script, please wait..", Duration = 5})
 
 local v126 = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local v127 = v126:CreateWindow({
@@ -139,6 +139,13 @@ v128.Sell:AddDropdown("SellTypeDropdown", {
     ["Callback"] = function(value)
         -- Handle sell type selection here
     end
+})
+
+v128.Misc:AddToggle("AntiStaff", {
+    ["Title"] = "Anti Staff",
+    ["Description"] = "Kicks you when a Mod/Dev/Staff joins your game (avoid bans)",
+    ["Default"] = false,
+    ["Callback"] = function(state) end
 })
 
 v128.Misc:AddToggle("AntiAFK", {

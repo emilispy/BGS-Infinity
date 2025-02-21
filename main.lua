@@ -13,7 +13,6 @@ local v127 = v126:CreateWindow({
 
 local v128 = {
     ["Home"] = v127:AddTab({["Title"] = "Home", ["Icon"] = "rbxassetid://7733960981"}),
-    ["Main"] = v127:AddTab({["Title"] = "Main", ["Icon"] = "rbxassetid://7733749837"}),
     ["AutoFarm"] = v127:AddTab({["Title"] = "Auto Farm", ["Icon"] = "rbxassetid://94890807905992"}),
     ["Eggs"] = v127:AddTab({["Title"] = "Eggs", ["Icon"] = "rbxassetid://111252145412943"}), 
     ["Race"] = v127:AddTab({["Title"] = "Race", ["Icon"] = "rbxassetid://112318332168449"}), 
@@ -43,7 +42,7 @@ v128.Home:AddParagraph({
 })
 
 
-v128.Main:AddToggle("AutoBlowToggle", {
+v128.Main:AutoFarm("AutoBlowToggle", {
     ["Title"] = "Auto Blow",
     ["Description"] = "Automatically blows bubbles for you.",
     ["Default"] = false,
@@ -70,13 +69,6 @@ v128.AutoFarm:AddToggle("AutoLevels", {
     end
 })
 
-v128.Main:AddButton({
-    ["Title"] = "Redeem Codes",
-    ["Description"] = "Redeems all codes instantly.",
-    ["Callback"] = function()
-        -- Insert code to instantly redeem all codes here
-    end
-})
 
 v128.Main:AddButton({
     ["Title"] = "Unlock All",
@@ -194,3 +186,18 @@ v128.LP:AddSlider("SpeedSlider", {
     end
 })
 
+v128.Misc:AddButton({
+    ["Title"] = "Redeem Codes",
+    ["Description"] = "Redeems all codes instantly.",
+    ["Callback"] = function()
+        -- Insert code to instantly redeem all codes here
+    end
+})
+
+v128.Misc:AddButton({
+    ["Title"] = "Unlock All",
+    ["Description"] = "Unlocks all islands for you.",
+    ["Callback"] = function()
+        -- Insert code to unlock all islands here
+    end
+})

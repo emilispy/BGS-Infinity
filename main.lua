@@ -61,7 +61,7 @@ v128.AutoFarm:AddToggle("AutoPickupToggle", {
     end
 })
 
-v128.Autofarm:AddToggle("AutoLevels", {
+v128.AutoFarm:AddToggle("AutoLevels", {
     ["Title"] = "Auto Levels",
     ["Description"] = "Automatically levels up for you.",
     ["Default"] = false,

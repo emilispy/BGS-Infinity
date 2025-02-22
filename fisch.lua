@@ -83,8 +83,8 @@ local UserInputService = game:GetService('UserInputService')
 
 local LocalPlayer = Players.LocalPlayer
 local LocalCharacter = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
-local HumanoidRootPart = LocalCharacter:FindFirstChild("HumanoidRootPart")
--- local UserPlayer = HumanoidRootPart:WaitForChild("user")
+local HumanoidRootPart = LocalCharacter:WaitForChild("HumanoidRootPart")
+local UserPlayer = HumanoidRootPart:WaitForChild("user")
 local ActiveFolder = Workspace:FindFirstChild("active")
 local FishingZonesFolder = Workspace:FindFirstChild("zones"):WaitForChild("fishing")
 local TpSpotsFolder = Workspace:FindFirstChild("world"):WaitForChild("spawns"):WaitForChild("TpSpots")
